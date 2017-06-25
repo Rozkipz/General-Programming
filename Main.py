@@ -3,6 +3,7 @@ import math, random
 
 class RPSGame:
     def __init__(self):
+        """Set up the initial variables with new class is created."""
         self.valid_moves = ['Rock', 'Paper', 'Scissors', 'Spock', 'Lizard']
         self.menu()
         self.number_to_win = math.ceil((self.number_of_turns + 1) / 2.0)
@@ -10,19 +11,24 @@ class RPSGame:
         self.p1_wins, self.p2_wins = 0.0, 0.0
         self.moves = []
 
+        self.values = {'Rock': 1, 'Paper': 2, 'Scissors': 3, 'Spock': 4, 'Lizard': 5}
+
     def person_input(self, player_num):
+        """Get player input, and run validation on it."""
         while True:
             move = raw_input("Player {0}, what's your move? ".format(player_num))
             if self.check_valid_move(move):
                 return move.lower().capitalize()
 
     def check_valid_move(self, move):
+        """Validate player move."""
         if move.lower().capitalize() in self.valid_moves:
             return True
         else:
             return False
 
     def menu(self):
+        """Initial menu, see who they want the opponent to be, and the number of turns."""
         while True:
             self.opponent = raw_input("Who would you like to play? ")
             self.opponent = self.opponent.lower().capitalize()
@@ -42,8 +48,9 @@ class RPSGame:
                 print "That isn't a number, please try again."
 
     def check_winner(self, p1, p2):
+        """Check all combinations of win/lose"""
         # Would use a case statement here, but python doesn't have them.
-        self.moves.extend([p1, p2])
+        """
         if p1 == p2:
             print "Tie round."
             return 0
@@ -117,13 +124,27 @@ class RPSGame:
             elif p2 == 'Spock':
                 print "{0} won".format(self.p1)
                 self.p1_wins += 1
-
+        """
+        self.moves.extend([p1, p2])
+        total = self.values[p1] - self.values[p2]
+        if total == 0:
+            print "Tie round."
+            return 0
+        if total in [-4, -2, 1, 3]:
+            print "test"
+            print "{0} won".format(self.p1)
+            self.p1_wins += 1
+        else:
+            print "{0} won".format(self.p2)
+            self.p2_wins += 1
         self.rounds += 1
 
     def random_move(self):
+        """Get random move for the computer"""
         return random.choice(self.valid_moves)
 
-    def play(self):
+    def run(self):
+        """The main function that plays the game"""
         while self.p1_wins < self.number_to_win and self.p2_wins < self.number_to_win:
             first_move = self.person_input(1)
             if self.opponent == 'Person':
@@ -149,9 +170,6 @@ class RPSGame:
         print "{0} won: {1}. {2} won: {3}. Total rounds: {4}".format(self.p1, int(self.p1_wins), self.p2,
                                                                      int(self.p2_wins),
                                                                      self.rounds)
-
-    def run(self):
-        self.play()
 
 
 if __name__ == "__main__":
