@@ -77,6 +77,6 @@ class RPSGame:
         print "Rock: {0}\nPaper: {1}\nScissors: {2}".format(self.moves.count('Rock'), self.moves.count('Paper'), self.moves.count('Scissors'))
         print "Player 1 wins: {0} Player 2 wins: {1} Total rounds: {2}".format(int(self.p1_wins), int(self.p2_wins), self.rounds)
 
-
-new_game = RPSGame()
-new_game.run()
+if __name__ == "__main__":
+    new_game = RPSGame()
+    new_game.run()

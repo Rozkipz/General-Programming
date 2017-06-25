@@ -25,7 +25,8 @@ class RPSGame:
     def menu(self):
         while True:
             self.opponent = raw_input("Who would you like to play? ")
-            if self.opponent.lower().capitalize() in ['Person', 'Computer']:
+            self.opponent = self.opponent.lower().capitalize()
+            if self.opponent in ['Person', 'Computer']:
                 break
             else:
                 print "That isn't a valid opponent, please try again."
@@ -43,6 +44,7 @@ class RPSGame:
     def check_winner(self, p1, p2):
         # Would use a case statement here, but python doesn't have them.
         self.moves.extend([p1, p2])
+        print '\n'
         if p1 == p2:
             print "Tie round."
             return 0
@@ -87,7 +89,7 @@ class RPSGame:
                 self.p1 = 'You'
                 self.p2 = 'Computer'
                 second_move = self.random_move()
-                print "Computer chose: {0}".format(second_move)
+                print "Computer chose: {0}\n".format(second_move)
             self.check_winner(first_move, second_move)
 
         print "\n"
@@ -101,7 +103,6 @@ class RPSGame:
     def run(self):
         self.play()
 
-
-
-new_game = RPSGame()
-new_game.run()
+if __name__ == "__main__":
+    new_game = RPSGame()
+    new_game.run()
