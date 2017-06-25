@@ -127,14 +127,12 @@ class RPSGame:
                 print "{0} won".format(self.p1)
                 self.p1_wins += 1
         """
-        
+
         self.moves.extend([p1, p2])
         total = self.values[p1] - self.values[p2]
         if total == 0:
             print "Tie round."
-            return 0
         if total in [-4, -2, 1, 3]:
-            print "test"
             print "{0} won".format(self.p1)
             self.p1_wins += 1
         else:
