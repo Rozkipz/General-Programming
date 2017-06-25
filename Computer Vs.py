@@ -1,4 +1,4 @@
-import math
+import math, random
 
 
 class RPSGame:
@@ -12,7 +12,7 @@ class RPSGame:
 
     def person_input(self, player_num):
         while True:
-            move = raw_input("Player {0} What's your move? ".format(player_num))
+            move = raw_input("Player {0}, what's your move? ".format(player_num))
             if self.check_valid_move(move):
                 return move.lower().capitalize()
 
@@ -24,6 +24,13 @@ class RPSGame:
 
     def menu(self):
         while True:
+            self.opponent = raw_input("Who would you like to play? ")
+            if self.opponent.lower().capitalize() in ['Person', 'Computer']:
+                break
+            else:
+                print "That isn't a valid opponent, please try again."
+
+        while True:
             try:
                 self.number_of_turns = int(input("How many turns would you like to play? "))
                 if self.number_of_turns > 0:
@@ -31,7 +38,7 @@ class RPSGame:
                 else:
                     print "That isn't a valid number of turns, please try again."
             except NameError:
-                print "That isn't a valid number, please try again."
+                print "That isn't a number, please try again."
 
     def check_winner(self, p1, p2):
         # Would use a case statement here, but python doesn't have them.
@@ -42,40 +49,58 @@ class RPSGame:
 
         elif p1 == 'Rock':
             if p2 == 'Scissors':
-                print "Player 1 wins"
+                print "{0} won".format(self.p1)
                 self.p1_wins += 1
             else:
-                print "Player 2 wins"
+                print "{0} won".format(self.p2)
                 self.p2_wins += 1
 
         elif p1 == 'Scissors':
             if p2 == 'Rock':
-                print "Player 2 wins"
+                print "{0} won".format(self.p2)
                 self.p2_wins += 1
             else:
-                print "Player 1 wins"
+                print "{0} won".format(self.p1)
                 self.p1_wins += 1
 
         else:
             if p2 == 'Rock':
-                print "Player 1 wins"
+                print "{0} won".format(self.p1)
                 self.p1_wins += 1
             else:
-                print "Player 2 wins"
+                print "{0} won".format(self.p2)
                 self.p2_wins += 1
 
         self.rounds += 1
 
-    def run(self):
+    def random_move(self):
+        return random.choice(['Rock', 'Paper', 'Scissors'])
+
+    def play(self):
         while self.p1_wins < self.number_to_win and self.p2_wins < self.number_to_win:
             first_move = self.person_input(1)
-            second_move = self.person_input(2)
+            if self.opponent == 'Person':
+                self.p1 = 'Player 1'
+                self.p2 = 'Player 2'
+                second_move = self.person_input(2)
+            else:
+                self.p1 = 'You'
+                self.p2 = 'Computer'
+                second_move = self.random_move()
+                print "Computer chose: {0}".format(second_move)
             self.check_winner(first_move, second_move)
+
         print "\n"
-        print "Player 1 wins the game" if self.p1_wins > self.p2_wins else "Player 2 wins the game"
-        print "Number of each moves:"
-        print "Rock: {0}\nPaper: {1}\nScissors: {2}".format(self.moves.count('Rock'), self.moves.count('Paper'), self.moves.count('Scissors'))
-        print "Player 1 wins: {0} Player 2 wins: {1} Total rounds: {2}".format(int(self.p1_wins), int(self.p2_wins), self.rounds)
+        print "{0} won the game".format(self.p1) if self.p1_wins > self.p2_wins else "{0} won the game".format(self.p2)
+        print "Number of each move:"
+        print "Rock: {0}\nPaper: {1}\nScissors: {2}".format(self.moves.count('Rock'), self.moves.count('Paper'),
+                                                            self.moves.count('Scissors'))
+        print "{0} won: {1}. {2} won: {3}. Total rounds: {4}".format(self.p1, int(self.p1_wins), self.p2, int(self.p2_wins),
+                                                                               self.rounds)
+
+    def run(self):
+        self.play()
+
 
 
 new_game = RPSGame()
