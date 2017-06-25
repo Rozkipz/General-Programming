@@ -50,6 +50,8 @@ class RPSGame:
     def check_winner(self, p1, p2):
         """Check all combinations of win/lose"""
         # Would use a case statement here, but python doesn't have them.
+        # Below commented out, better solution below.
+
         """
         if p1 == p2:
             print "Tie round."
@@ -125,6 +127,7 @@ class RPSGame:
                 print "{0} won".format(self.p1)
                 self.p1_wins += 1
         """
+        
         self.moves.extend([p1, p2])
         total = self.values[p1] - self.values[p2]
         if total == 0:
