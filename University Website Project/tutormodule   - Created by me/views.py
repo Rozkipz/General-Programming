@@ -57,7 +57,7 @@ def getmoduleinfo(request):
 
         try:
             cursor.execute('SELECT * FROM ModuleInfoTable WHERE Module_Code = ?', (module_code,))
-            # This runs and SQL command to select everything from the module code entered by the user.
+            # This runs an SQL command to select everything from the module code entered by the user.
 
             if cursor.arraysize > 0:
                 # This checks if there is already a field with that module code.
@@ -72,7 +72,7 @@ def getmoduleinfo(request):
             sqldb.commit()
             # This adds the new module to the database and commits it.
 
-        except:
+        except OperationalError:
             # This occurs when a table hasn't been created in the DB.
 
             cursor.execute(

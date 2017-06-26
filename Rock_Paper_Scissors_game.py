@@ -37,7 +37,7 @@ class RPSGame:
         # Check if lambda list comes back empty or with a move in it.
         if list_of_moves:
             return True
-        
+
         else:
             return False
 
