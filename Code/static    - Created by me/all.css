@@ -1,0 +1,54 @@
+body
+{
+    background: rgba(64,168,196,1);
+    background: -moz-linear-gradient(left, rgba(64,168,196,1) 0%, rgba(57,147,172,1) 51%, rgba(49,120,140,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(64,168,196,1)), color-stop(51%, rgba(57,147,172,1)), color-stop(100%, rgba(49,120,140,1)));
+    background: -webkit-linear-gradient(left, rgba(64,168,196,1) 0%, rgba(57,147,172,1) 51%, rgba(49,120,140,1) 100%);
+    background: -o-linear-gradient(left, rgba(64,168,196,1) 0%, rgba(57,147,172,1) 51%, rgba(49,120,140,1) 100%);
+    background: -ms-linear-gradient(left, rgba(64,168,196,1) 0%, rgba(57,147,172,1) 51%, rgba(49,120,140,1) 100%);
+    background: linear-gradient(to right, rgba(64,168,196,1) 0%, rgba(57,147,172,1) 51%, rgba(49,120,140,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40a8c4', endColorstr='#31788c', GradientType=1 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #f400d8;
+    text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #f400d8;
+    text-align: center;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #f400d8;
+    text-align: center;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #f400d8;
+    text-align: center;
+}
+
+div
+{
+    text-align: center;
+}
+
+input
+{
+    @input-border-focus: #f400d8;
+    outline-color: #f400d8;
+    margin-left:20%;
+}
+
+button {
+    border: 100px;
+    background-color: #f400d8;
+    margin-top: 8%;
+    height: 350px;
+    width: 350%;
+    margin-left: 0%;
+}

@@ -1,0 +1,4 @@
+passlib==1.6.5
+django==1.7.4
+Pillow==3.4.1
+py2docx==0.2.0

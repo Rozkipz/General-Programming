@@ -1,0 +1,106 @@
+{% load staticfiles %}
+<html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'all.css' %}">
+<body>
+<form name="form" action="{% url "tutormodule.views.getmoduleinfo" %}"
+      method="POST">{% csrf_token %}
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Module Code" name="Module_Code"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Module Title" name="Module_Title"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Module Tutor" name="Module_Tutor"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Cw No" name="Cw_No"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Cw Title" name="Cw_Title"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Issue Date" name="Issue_Date"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Due Date Time" name="Due_Date_Time"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <input type="text" style="margin-left:20%;"
+                   placeholder="Assessment Type" name="Assessment_Type"/>
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <div>
+            <input type="text" placeholder="Percentage Of Module" name="Percentage_Of_Module"/>
+        </div>
+    </div>
+
+
+    <br>
+
+    <div style="max-width:470px;">
+        <div style="text-align: center;">
+            <a href="complete.html">
+                <button type="submit"
+                        value="Submit">
+                    <strong>Submit</strong>
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+</form>
+
+</body>
+</html>

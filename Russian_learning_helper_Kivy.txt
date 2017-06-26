@@ -1,0 +1,5 @@
+First actual project I did, not very representative of my coding abilities now. Useful to look back at things I'd done incorrectly in the past to see how I can improve.
+
+Would like to re-write this at some point for comparison's sake.
+
+https://kivy.org/#home

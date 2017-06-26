@@ -1,0 +1,57 @@
+{% load staticfiles %} <!-- Loading libraries to allow for the displaying of static files !-->
+<html>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'all.css' %}">
+   <body>
+      <!-- Linking the POST association with the postnew function within views.py !-->
+      <form name = "form" action = "{% url "Coversheet.views.postnew" %}"
+         method = "POST" >{% csrf_token %}
+
+         <!-- Input box for Student Name !-->
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Student Name" name = "Student_Name" />
+            </center>
+         </div>
+
+      <br>
+      
+      <!-- Input box for Student ID !-->   
+      <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Student ID" name = "Student_ID" />
+            </center>
+         </div>
+
+      <br>
+
+      <!-- Input box for Module Code !-->   
+      <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "Module Code" name = "Module_Code" />
+            </center>
+         </div>
+
+
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <!-- Defining the colour and spacing of the page, alongside the submit button for the entered details above !-->
+               <button style = "border:0px; background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%;margin-left:19%;" type = "submit"
+                  value = "Submit" >
+                  <strong>Submit</strong>
+               </button>
+
+            </center>
+         </div>
+
+      </form>
+
+   </body>
+</html>

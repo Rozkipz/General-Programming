@@ -1,0 +1,9 @@
+This was a project I undertook during University. It was to showcase the use of threads by creating a mars rover with 6 wheels each controlled by a thread.
+
+These wheels could hit problems that it could either sort out itself, or ask the command centre for help.
+
+Uses a WheelState class to keep track of the state of the wheel, and an enum equivilent as that was a requirement.
+
+I created 6 seperate wheel functions, and 6 seperate thread calls as to ensure my lecturer knew there were 6 threads being used.
+
+Some of the design decisions may seem odd, but they were done as to ensure the program complied with the requirements I was given.

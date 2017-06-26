@@ -1,0 +1,18 @@
+This was a task a company asked me to complete which ended up getting me an interview. Basic premise was to create a PvP rock paper scissors game, then add some 'extensions' to also showcase git usage. 
+- Adding lizard/Spock.
+- Adding a random computer.
+
+Lines 12/13/32 use lambdas to get a result which is used. Not the best way to approach this, more of a way to show I can use lambdas.
+
+Done in a class to show OOP.
+
+RPS(LS) winner is determined by values given to each move:
+Rock = 1
+Paper = 2
+Scissors = 3
+Spock = 4
+Lizard = 5
+
+When you convert the players moved into numbers, and subtract player 2's move from player 1's you get a number between -4 and 4.
+
+If the total is -4, -2, 1 or 3, it means that player 1 has won, and if the total is -3, -1, 2 or 4, it means that player 2 has won. If the total is 0, it's a tie game.
