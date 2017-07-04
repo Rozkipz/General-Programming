@@ -1,0 +1,9 @@
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\rps\RPSTask\C# simple clientserver\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb

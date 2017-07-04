@@ -33,10 +33,11 @@
             this.form_label = new System.Windows.Forms.TextBox();
             this.form_checkbox = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Label = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.id_box = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +84,6 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // id
             // 
             this.id.HeaderText = "Door ID";
@@ -108,11 +103,27 @@
             this.Label.ReadOnly = true;
             this.Label.Width = 150;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // id_box
+            // 
+            this.id_box.Location = new System.Drawing.Point(485, 240);
+            this.id_box.Name = "id_box";
+            this.id_box.Size = new System.Drawing.Size(102, 20);
+            this.id_box.TabIndex = 4;
+            this.id_box.Text = "-1";
+            this.id_box.TextChanged += new System.EventHandler(this.id_box_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 721);
+            this.Controls.Add(this.id_box);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.form_checkbox);
             this.Controls.Add(this.form_label);
@@ -135,6 +146,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Label;
+        private System.Windows.Forms.TextBox id_box;
     }
 }
 

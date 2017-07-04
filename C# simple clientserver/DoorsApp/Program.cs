@@ -63,6 +63,17 @@ namespace DoorsApp
             }
         }
 
+        static void update_table(SqlConnection sqlcon, int id, string label, bool status)
+        {
+            using (SqlCommand command = new SqlCommand("UPDATE doors SET label=@label, status=@status WHERE id=@id", sqlcon))
+            {
+                command.Parameters.Add(new SqlParameter("id", id));
+                command.Parameters.Add(new SqlParameter("label", label));
+                command.Parameters.Add(new SqlParameter("status", status));
+                command.ExecuteNonQuery();
+            }
+        }
+
         static void create_table(SqlConnection sqlcon)
         {
             try
@@ -149,9 +160,16 @@ namespace DoorsApp
                     Console.WriteLine(sent_str);
                     string[] values = sent_str.Split(',');
                     
-                    Console.WriteLine(values[0]);
-                    Console.WriteLine(values[1]);
-                    insert_into_table(sqlCon, values[0], Convert.ToBoolean(Convert.ToInt16(values[1])));
+                    Console.WriteLine(values[0]); //id
+                    Console.WriteLine(values[1]); //label
+                    Console.WriteLine(values[2]); //checked 0=false 1=true
+
+                    if (Convert.ToInt16(values[0]) != -1)
+                    {
+                        update_table(sqlCon, Convert.ToInt16(values[0]), values[1], Convert.ToBoolean(values[2]));
+                    }
+
+                    insert_into_table(sqlCon, values[1], Convert.ToBoolean(values[2]));
 
                     s.Close();
                     sqlCon.Close();

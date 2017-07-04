@@ -1,0 +1,6 @@
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\bin\Debug\DoorsApp.exe.config
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\bin\Debug\DoorsApp.exe
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\bin\Debug\DoorsApp.pdb
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\obj\Debug\DoorsApp.exe
+C:\rps\RPSTask\C# simple clientserver\DoorsApp\obj\Debug\DoorsApp.pdb

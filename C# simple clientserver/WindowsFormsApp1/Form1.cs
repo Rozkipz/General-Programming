@@ -27,6 +27,11 @@ namespace WindowsFormsApp1
 
         }
 
+        private void id_box_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -43,23 +48,13 @@ namespace WindowsFormsApp1
             Console.WriteLine("Connected.");
             ASCIIEncoding asen = new ASCIIEncoding();
 
-            int checkedbox = 0;
 
-            if (form_checkbox.Checked == true)
-            {
-                string str = form_label.Text + ",1";
-                Console.WriteLine(str);
-                byte[] ba = asen.GetBytes(str);
-                stm.Write(ba, 0, ba.Length);
-                Console.WriteLine("written");
-            }
-            else
-            {
-                string str = form_label.Text + ",0";
-                byte[] ba = asen.GetBytes(str);
-                Console.WriteLine(ba);
-                stm.Write(ba, 0, ba.Length);
-            }
+            string id = (String.IsNullOrEmpty(id_box.Text)) ? "-1" : id_box.Text;
+            bool check = (form_checkbox.Checked) ? true : false;
+            string str = id + ',' + form_label.Text + ',' + check;
+            byte[] ba = asen.GetBytes(str);
+
+            stm.Write(ba, 0, ba.Length);
             stm.Close();
         }
 
