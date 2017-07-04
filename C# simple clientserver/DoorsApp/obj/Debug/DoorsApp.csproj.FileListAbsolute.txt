@@ -1,0 +1,7 @@
+C:\Doors\DoorsApp\DoorsApp\bin\Debug\DoorsApp.exe.config
+C:\Doors\DoorsApp\DoorsApp\bin\Debug\DoorsApp.exe
+C:\Doors\DoorsApp\DoorsApp\bin\Debug\DoorsApp.pdb
+C:\Doors\DoorsApp\DoorsApp\obj\Debug\DoorsApp.exe
+C:\Doors\DoorsApp\DoorsApp\obj\Debug\DoorsApp.pdb
+C:\Doors\DoorsApp\DoorsApp\obj\Debug\DoorsApp.csprojResolveAssemblyReference.cache
+C:\Doors\DoorsApp\DoorsApp\bin\Debug\doorclass.DLL

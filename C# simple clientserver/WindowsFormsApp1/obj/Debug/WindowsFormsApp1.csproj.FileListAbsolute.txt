@@ -1,0 +1,10 @@
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Doors\DoorsApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Doors\DoorsApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Doors\DoorsApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Doors\DoorsApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Doors\DoorsApp\WindowsFormsApp1\bin\Debug\doorclass.DLL
